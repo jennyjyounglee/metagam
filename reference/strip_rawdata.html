@@ -136,16 +136,16 @@ model object, while keeping aggregated quantities. The resulting object can be
 shared without exposing individual participant data.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for list</span>
-<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for gamm</span>
-<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for gam</span>
-<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>strip_rawdata</span>(<span class='no'>model</span>, <span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>save_ranges</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,7 +162,8 @@ shared without exposing individual participant data.</p>
       <th>save_ranges</th>
       <td><p>Logical specifying whether to save the ranges of each
 variable used by the model. For numeric variables this amounts to the minimum
-and maximum, and for factors all levels are saved.</p></td>
+and maximum, and for factors all levels are saved. The values will be in the
+list element <code>var.summary</code> of the returned object.</p></td>
     </tr>
     <tr>
       <th>...</th>
