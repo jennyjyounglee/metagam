@@ -155,7 +155,9 @@ for the smooth terms defined by the <code>terms</code> argument, with length giv
     <tr>
       <th>grid_size</th>
       <td><p>Numeric value giving the number of elements to use in the grid of explanatory
-variables when <code>grid=NULL</code>.</p></td>
+variables when <code>grid=NULL</code>. When multiple terms are supplied, each combination of
+values of explanatory variables are generated, and the number of grid
+points becomes <code>grid_size</code> to the power of the number of terms.</p></td>
     </tr>
     <tr>
       <th>type</th>
