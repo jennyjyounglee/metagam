@@ -17,7 +17,10 @@
     fit is sought. metagam provides functionality for removing individual
     participant data from models computed using the mgcv and gamm4 packages such
     that the model objects can be shared without exposing individual data.
-    Furthermore, methods for meta-analysing these fits are provided.">
+    Furthermore, methods for meta-analysing these fits are provided. The implemented
+    methods are described in Sorensen et al. (2020), &lt;http://arxiv.org/abs/2002.02627&gt;,
+    extending previous works by Schwartz and Zanobetti (2000) &lt;http://www.jstor.org/stable/3703820&gt;
+    and Crippa et al. (2018) &lt;https://doi.org/10.6000/1929-6029.2018.07.02.1&gt;.">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -95,7 +98,7 @@
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
-<p>metagam is an R-package for meta-analysis of generalized additive models (GAMs). Its main application is cases in which raw data are located in multiple locations, and cannot be shared due to ethical or regulatory restrictions. metagam provides functions for removing all individual participant data from from GAMs fitted separately at each location, such that the resulting object can be shared to a central location. Next, metagam provides functions for meta-analysing these fitted GAMs using pointwise meta-analysis, as well as plotting and summary methods for analyzing the meta-analytic fits.</p>
+<p>metagam is an R-package for meta-analysis of generalized additive models (GAMs). Its main application is cases in which raw data are located in multiple locations, and cannot be shared due to ethical or regulatory restrictions. metagam provides functions for removing all individual participant data from from GAMs fitted separately at each location, such that the resulting object can be shared to a central location. Next, metagam provides functions for meta-analysing these fitted GAMs using pointwise meta-analysis, as well as plotting and summary methods for analyzing the meta-analytic fits. The methods implemented are described in Sørensen et al. (2020), extending upon previous works by Schwartz and Zanobetti (2000) and Crippa, Thomas, and Orsini (2018).</p>
 <p>Currently, GAMs objects created with the following functions are supported:</p>
 <ul>
 <li>From package <a href="https://cran.r-project.org/package=mgcv">mgcv</a>: <code><a href="https://rdrr.io/pkg/mgcv/man/bam.html">bam()</a></code>, <code><a href="https://rdrr.io/pkg/mgcv/man/gam.html">gam()</a></code> and <code><a href="https://rdrr.io/pkg/mgcv/man/gamm.html">gamm()</a></code>.</li>
@@ -157,6 +160,44 @@
 <h2 class="hasAnchor">
 <a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
 <p>Please note that the metagam project is released with a <a href="https://www.contributor-covenant.org/version/1/0/0/code-of-conduct.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
+<div id="references" class="section level2">
+<h2 class="hasAnchor">
+<a href="#references" class="anchor"></a>References</h2>
+<div id="refs" class="references">
+
+<div id="ref-Crippa2018">
+
+Crippa, Alessio, Ilias Thomas, and Nicola Orsini. 2018. “A Pointwise
+Approach to Dose-Response Meta-Analysis of Aggregated Data.”
+*International Journal of Statistics in Medical Research* 7 (May):
+25–32. <https:>.
+
+</https:>
+</div>
+
+<div id="ref-Schwarz2000">
+
+Schwartz, Joel, and Antonella Zanobetti. 2000. “Using Meta-Smoothing to
+Estimate Dose-Response Trends Across Multiple Studies, with Application
+to Air Pollution and Daily Death.” *Epidemiology* 11 (6): 666–72.
+<http:>.
+
+</http:>
+</div>
+
+<div id="ref-Sorensen2020">
+
+Sørensen, Øystein, Andreas M Brandmaier, Didac Macia Bros, Klaus
+Ebmeier, Paolo Ghisletta, Rogier A Kievit, Athanasia M Mowinckel,
+Kristine B Walhovd, Rene Westerhausen, and Anders Fjell. 2020.
+“Meta-Analysis of Generalized Additive Models in Neuroimaging
+Studies.” <http:>.
+
+</http:>
+</div>
+
+</div>
 </div>
 </div>
   </div>
